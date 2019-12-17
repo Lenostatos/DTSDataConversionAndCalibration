@@ -1,0 +1,236 @@
+# depslib dependency file v1.0
+1499526407 source:/media/HDD/MyProjects/Cpp_UnitTesting/unittest-cpp-master/UnitTest++/AssertException.cpp
+	"AssertException.h"
+
+1499526407 /media/HDD/MyProjects/Cpp_UnitTesting/unittest-cpp-master/UnitTest++/AssertException.h
+	"Config.h"
+	"HelperMacros.h"
+	<exception>
+
+1499526407 /media/HDD/MyProjects/Cpp_UnitTesting/unittest-cpp-master/UnitTest++/Config.h
+
+1499526407 /media/HDD/MyProjects/Cpp_UnitTesting/unittest-cpp-master/UnitTest++/HelperMacros.h
+	"Config.h"
+
+1499526407 source:/media/HDD/MyProjects/Cpp_UnitTesting/unittest-cpp-master/UnitTest++/Checks.cpp
+	"Checks.h"
+	<cstring>
+
+1499526407 /media/HDD/MyProjects/Cpp_UnitTesting/unittest-cpp-master/UnitTest++/Checks.h
+	"Config.h"
+	"TestResults.h"
+	"MemoryOutStream.h"
+
+1499526407 /media/HDD/MyProjects/Cpp_UnitTesting/unittest-cpp-master/UnitTest++/TestResults.h
+	"HelperMacros.h"
+
+1499526407 /media/HDD/MyProjects/Cpp_UnitTesting/unittest-cpp-master/UnitTest++/MemoryOutStream.h
+	"Config.h"
+	"HelperMacros.h"
+	<sstream>
+	<cstddef>
+
+1499526407 source:/media/HDD/MyProjects/Cpp_UnitTesting/unittest-cpp-master/UnitTest++/CurrentTest.cpp
+	"CurrentTest.h"
+	<cstddef>
+
+1499526407 /media/HDD/MyProjects/Cpp_UnitTesting/unittest-cpp-master/UnitTest++/CurrentTest.h
+	"HelperMacros.h"
+
+1499526407 source:/media/HDD/MyProjects/Cpp_UnitTesting/unittest-cpp-master/UnitTest++/DeferredTestReporter.cpp
+	"Config.h"
+	"DeferredTestReporter.h"
+	"TestDetails.h"
+
+1499526407 /media/HDD/MyProjects/Cpp_UnitTesting/unittest-cpp-master/UnitTest++/DeferredTestReporter.h
+	"Config.h"
+	"TestReporter.h"
+	"DeferredTestResult.h"
+	<vector>
+
+1499526407 /media/HDD/MyProjects/Cpp_UnitTesting/unittest-cpp-master/UnitTest++/TestReporter.h
+	"HelperMacros.h"
+
+1499526407 /media/HDD/MyProjects/Cpp_UnitTesting/unittest-cpp-master/UnitTest++/DeferredTestResult.h
+	"Config.h"
+	"HelperMacros.h"
+	<string>
+	<vector>
+
+1499526407 /media/HDD/MyProjects/Cpp_UnitTesting/unittest-cpp-master/UnitTest++/TestDetails.h
+	"HelperMacros.h"
+
+1499526407 source:/media/HDD/MyProjects/Cpp_UnitTesting/unittest-cpp-master/UnitTest++/DeferredTestResult.cpp
+	"Config.h"
+	"DeferredTestResult.h"
+	<cstring>
+
+1499526407 source:/media/HDD/MyProjects/Cpp_UnitTesting/unittest-cpp-master/UnitTest++/MemoryOutStream.cpp
+	"MemoryOutStream.h"
+	<cstring>
+	<cstdio>
+
+1499526407 source:/media/HDD/MyProjects/Cpp_UnitTesting/unittest-cpp-master/UnitTest++/Posix/SignalTranslator.cpp
+	"SignalTranslator.h"
+
+1499526407 /media/HDD/MyProjects/Cpp_UnitTesting/unittest-cpp-master/UnitTest++/Posix/SignalTranslator.h
+	<setjmp.h>
+	<signal.h>
+
+1499526407 source:/media/HDD/MyProjects/Cpp_UnitTesting/unittest-cpp-master/UnitTest++/Posix/TimeHelpers.cpp
+	"TimeHelpers.h"
+	<unistd.h>
+
+1499526407 /media/HDD/MyProjects/Cpp_UnitTesting/unittest-cpp-master/UnitTest++/Posix/TimeHelpers.h
+	<sys/time.h>
+
+1499526407 source:/media/HDD/MyProjects/Cpp_UnitTesting/unittest-cpp-master/UnitTest++/ReportAssert.cpp
+	"ReportAssert.h"
+	"ReportAssertImpl.h"
+	"AssertException.h"
+	"CurrentTest.h"
+	"TestResults.h"
+	"TestDetails.h"
+	"ReportAssertImpl.h"
+
+1499526407 /media/HDD/MyProjects/Cpp_UnitTesting/unittest-cpp-master/UnitTest++/ReportAssert.h
+	"HelperMacros.h"
+
+1499526407 /media/HDD/MyProjects/Cpp_UnitTesting/unittest-cpp-master/UnitTest++/ReportAssertImpl.h
+	"Config.h"
+	"HelperMacros.h"
+	<csetjmp>
+
+1499526407 source:/media/HDD/MyProjects/Cpp_UnitTesting/unittest-cpp-master/UnitTest++/Test.cpp
+	"Config.h"
+	"Test.h"
+	"TestList.h"
+	"TestResults.h"
+	"AssertException.h"
+	"MemoryOutStream.h"
+	"ExecuteTest.h"
+	"Posix/SignalTranslator.h"
+
+1499526407 /media/HDD/MyProjects/Cpp_UnitTesting/unittest-cpp-master/UnitTest++/Test.h
+	"TestDetails.h"
+
+1499526407 /media/HDD/MyProjects/Cpp_UnitTesting/unittest-cpp-master/UnitTest++/TestList.h
+	"HelperMacros.h"
+
+1499526407 /media/HDD/MyProjects/Cpp_UnitTesting/unittest-cpp-master/UnitTest++/ExecuteTest.h
+	"Config.h"
+	"ExceptionMacros.h"
+	"TestDetails.h"
+	"TestResults.h"
+	"MemoryOutStream.h"
+	"AssertException.h"
+	"RequiredCheckException.h"
+	"CurrentTest.h"
+	"ReportAssertImpl.h"
+	"Posix/SignalTranslator.h"
+
+1499526407 /media/HDD/MyProjects/Cpp_UnitTesting/unittest-cpp-master/UnitTest++/ExceptionMacros.h
+	"Config.h"
+
+1499526407 /media/HDD/MyProjects/Cpp_UnitTesting/unittest-cpp-master/UnitTest++/RequiredCheckException.h
+	"Config.h"
+	"HelperMacros.h"
+	<exception>
+
+1499526407 source:/media/HDD/MyProjects/Cpp_UnitTesting/unittest-cpp-master/UnitTest++/TestDetails.cpp
+	"TestDetails.h"
+
+1499526407 source:/media/HDD/MyProjects/Cpp_UnitTesting/unittest-cpp-master/UnitTest++/TestList.cpp
+	"TestList.h"
+	"Test.h"
+	<cassert>
+
+1499526407 source:/media/HDD/MyProjects/Cpp_UnitTesting/unittest-cpp-master/UnitTest++/TestReporter.cpp
+	"TestReporter.h"
+
+1499526407 source:/media/HDD/MyProjects/Cpp_UnitTesting/unittest-cpp-master/UnitTest++/TestReporterStdout.cpp
+	"TestReporterStdout.h"
+	<cstdio>
+	"TestDetails.h"
+
+1499526407 /media/HDD/MyProjects/Cpp_UnitTesting/unittest-cpp-master/UnitTest++/TestReporterStdout.h
+	"TestReporter.h"
+
+1499526407 source:/media/HDD/MyProjects/Cpp_UnitTesting/unittest-cpp-master/UnitTest++/TestResults.cpp
+	"TestResults.h"
+	"TestReporter.h"
+	"TestDetails.h"
+
+1499526407 source:/media/HDD/MyProjects/Cpp_UnitTesting/unittest-cpp-master/UnitTest++/TestRunner.cpp
+	"TestRunner.h"
+	"TestResults.h"
+	"TestReporter.h"
+	"TestReporterStdout.h"
+	"TimeHelpers.h"
+	"MemoryOutStream.h"
+	<cstring>
+
+1499526407 /media/HDD/MyProjects/Cpp_UnitTesting/unittest-cpp-master/UnitTest++/TestRunner.h
+	"Test.h"
+	"TestList.h"
+	"CurrentTest.h"
+
+1499526407 /media/HDD/MyProjects/Cpp_UnitTesting/unittest-cpp-master/UnitTest++/TimeHelpers.h
+	"Config.h"
+	"Posix/TimeHelpers.h"
+	"Win32/TimeHelpers.h"
+
+1499526407 /media/HDD/MyProjects/Cpp_UnitTesting/unittest-cpp-master/UnitTest++/Win32/TimeHelpers.h
+	"../Config.h"
+	"../HelperMacros.h"
+
+1499526407 source:/media/HDD/MyProjects/Cpp_UnitTesting/unittest-cpp-master/UnitTest++/TimeConstraint.cpp
+	"TimeConstraint.h"
+	"TestResults.h"
+	"MemoryOutStream.h"
+	"CurrentTest.h"
+
+1499526407 /media/HDD/MyProjects/Cpp_UnitTesting/unittest-cpp-master/UnitTest++/TimeConstraint.h
+	"TimeHelpers.h"
+	"HelperMacros.h"
+	"TestDetails.h"
+
+1499526407 source:/media/HDD/MyProjects/Cpp_UnitTesting/unittest-cpp-master/UnitTest++/XmlTestReporter.cpp
+	"Config.h"
+	"XmlTestReporter.h"
+	<iostream>
+	<sstream>
+	<string>
+
+1499526407 /media/HDD/MyProjects/Cpp_UnitTesting/unittest-cpp-master/UnitTest++/XmlTestReporter.h
+	"Config.h"
+	"DeferredTestReporter.h"
+	<iosfwd>
+
+1499526407 source:/media/HDD/MyProjects/Cpp_UnitTesting/unittest-cpp-master/UnitTest++/CompositeTestReporter.cpp
+	"CompositeTestReporter.h"
+	<cstddef>
+
+1499526407 /media/HDD/MyProjects/Cpp_UnitTesting/unittest-cpp-master/UnitTest++/CompositeTestReporter.h
+	"TestReporter.h"
+
+1499526407 source:/media/HDD/MyProjects/Cpp_UnitTesting/unittest-cpp-master/UnitTest++/RequiredCheckException.cpp
+	"RequiredCheckException.h"
+
+1499526407 source:/media/HDD/MyProjects/Cpp_UnitTesting/unittest-cpp-master/UnitTest++/RequiredCheckTestReporter.cpp
+	"RequiredCheckTestReporter.h"
+	"CurrentTest.h"
+	"TestResults.h"
+
+1499526407 /media/HDD/MyProjects/Cpp_UnitTesting/unittest-cpp-master/UnitTest++/RequiredCheckTestReporter.h
+	"HelperMacros.h"
+	"ThrowingTestReporter.h"
+
+1499526407 /media/HDD/MyProjects/Cpp_UnitTesting/unittest-cpp-master/UnitTest++/ThrowingTestReporter.h
+	"TestReporter.h"
+
+1499526407 source:/media/HDD/MyProjects/Cpp_UnitTesting/unittest-cpp-master/UnitTest++/ThrowingTestReporter.cpp
+	"ThrowingTestReporter.h"
+	"RequiredCheckException.h"
+	"ReportAssertImpl.h"
+

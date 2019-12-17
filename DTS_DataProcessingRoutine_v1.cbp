@@ -1,0 +1,121 @@
+<?xml version="1.0" encoding="UTF-8" standalone="yes" ?>
+<CodeBlocks_project_file>
+	<FileVersion major="1" minor="6" />
+	<Project>
+		<Option title="DTS_DataProcessingRoutine_v1" />
+		<Option pch_mode="2" />
+		<Option compiler="gcc" />
+		<Build>
+			<Target title="Debug">
+				<Option output="bin/Debug/DTS_DataProcessingRoutine_v1" prefix_auto="1" extension_auto="1" />
+				<Option object_output="obj/Debug/" />
+				<Option type="1" />
+				<Option compiler="gcc" />
+				<Compiler>
+					<Add option="-g" />
+				</Compiler>
+			</Target>
+			<Target title="Release">
+				<Option output="bin/Release/DTS_DataProcessingRoutine_v1" prefix_auto="1" extension_auto="1" />
+				<Option object_output="obj/Release/" />
+				<Option type="1" />
+				<Option compiler="gcc" />
+				<Compiler>
+					<Add option="-O3" />
+				</Compiler>
+			</Target>
+		</Build>
+		<Compiler>
+			<Add option="-Wall" />
+			<Add option="-fexceptions" />
+			<Add directory="/home/leon/HDDdata/MyLibs/Cpp/boost/include" />
+			<Add directory="/home/leon/HDDdata/MyLibs/Cpp/rapidxml-1.13" />
+			<Add directory="/usr/local/include/lapackpp" />
+		</Compiler>
+		<Linker>
+			<Add library="/media/HDD/MyLibs/Cpp/boost/lib/libboost_system-mt.a" />
+			<Add library="/media/HDD/MyLibs/Cpp/boost/lib/libboost_system-mt.so" />
+			<Add library="/media/HDD/MyLibs/Cpp/boost/lib/libboost_system-mt-d.a" />
+			<Add library="/media/HDD/MyLibs/Cpp/boost/lib/libboost_system-mt-d.so" />
+			<Add library="/media/HDD/MyLibs/Cpp/boost/lib/libboost_system-mt-s.a" />
+			<Add library="/media/HDD/MyLibs/Cpp/boost/lib/libboost_system-mt-sd.a" />
+			<Add library="/media/HDD/MyLibs/Cpp/boost/lib/libboost_filesystem-mt.a" />
+			<Add library="/media/HDD/MyLibs/Cpp/boost/lib/libboost_filesystem-mt.so" />
+			<Add library="/media/HDD/MyLibs/Cpp/boost/lib/libboost_filesystem-mt-d.a" />
+			<Add library="/media/HDD/MyLibs/Cpp/boost/lib/libboost_filesystem-mt-d.so" />
+			<Add library="/media/HDD/MyLibs/Cpp/boost/lib/libboost_filesystem-mt-s.a" />
+			<Add library="/media/HDD/MyLibs/Cpp/boost/lib/libboost_filesystem-mt-sd.a" />
+			<Add library="/media/HDD/MyLibs/Cpp/boost/lib/libboost_date_time-mt.a" />
+			<Add library="/media/HDD/MyLibs/Cpp/boost/lib/libboost_date_time-mt.so" />
+			<Add library="/media/HDD/MyLibs/Cpp/boost/lib/libboost_date_time-mt-d.a" />
+			<Add library="/media/HDD/MyLibs/Cpp/boost/lib/libboost_date_time-mt-d.so" />
+			<Add library="/media/HDD/MyLibs/Cpp/boost/lib/libboost_date_time-mt-s.a" />
+			<Add library="/media/HDD/MyLibs/Cpp/boost/lib/libboost_date_time-mt-sd.a" />
+			<Add library="/usr/lib/x86_64-linux-gnu/libnetcdf_c++4.a" />
+			<Add library="/usr/lib/x86_64-linux-gnu/libnetcdf.so" />
+			<Add library="/usr/lib/x86_64-linux-gnu/libnetcdf_c++4.so" />
+			<Add library="/usr/local/lib/liblapackpp.so" />
+			<Add directory="/media/HDD/MyLibs/Cpp/boost/lib" />
+			<Add directory="/usr/local/lib" />
+		</Linker>
+		<Unit filename="input/configuration.cpp" />
+		<Unit filename="input/configuration.hpp" />
+		<Unit filename="input/data_node_value_order.cpp" />
+		<Unit filename="input/data_node_value_order.hpp" />
+		<Unit filename="input/directory.cpp" />
+		<Unit filename="input/directory.hpp" />
+		<Unit filename="input/fiber_map.cpp" />
+		<Unit filename="input/fiber_map.hpp" />
+		<Unit filename="input/node_paths.cpp" />
+		<Unit filename="input/node_paths.hpp" />
+		<Unit filename="input/node_value_type.cpp" />
+		<Unit filename="input/node_value_type.hpp" />
+		<Unit filename="input/switches.cpp" />
+		<Unit filename="input/switches.hpp" />
+		<Unit filename="input/tag.hpp" />
+		<Unit filename="input/tag_id.hpp" />
+		<Unit filename="input/tag_value.hpp" />
+		<Unit filename="input/tagging.hpp" />
+		<Unit filename="main.cpp" />
+		<Unit filename="other/csv_double.cpp" />
+		<Unit filename="other/csv_double.hpp" />
+		<Unit filename="other/csv_float.cpp" />
+		<Unit filename="other/csv_float.hpp" />
+		<Unit filename="other/csv_int.cpp" />
+		<Unit filename="other/csv_int.hpp" />
+		<Unit filename="other/data_nodes.hpp" />
+		<Unit filename="other/data_t.hpp" />
+		<Unit filename="other/file_data.cpp" />
+		<Unit filename="other/file_data.hpp" />
+		<Unit filename="other/file_paths_iterator.hpp" />
+		<Unit filename="other/filesystem_utilities.cpp" />
+		<Unit filename="other/filesystem_utilities.hpp" />
+		<Unit filename="other/iterator_array.hpp" />
+		<Unit filename="other/laf_t.hpp" />
+		<Unit filename="other/my_exceptions/file_error.hpp" />
+		<Unit filename="other/my_exceptions/node_path_error.hpp" />
+		<Unit filename="other/my_exceptions/tag_error.hpp" />
+		<Unit filename="other/node_path.cpp" />
+		<Unit filename="other/node_path.hpp" />
+		<Unit filename="other/temperature_calibration.cpp" />
+		<Unit filename="other/temperature_calibration.hpp" />
+		<Unit filename="other/xml_file.cpp" />
+		<Unit filename="other/xml_file.hpp" />
+		<Unit filename="output/dimension_id.cpp" />
+		<Unit filename="output/dimension_id.hpp" />
+		<Unit filename="output/directory.cpp" />
+		<Unit filename="output/directory.hpp" />
+		<Unit filename="output/file_setup.cpp" />
+		<Unit filename="output/file_setup.hpp" />
+		<Unit filename="output/netCDF_file.cpp" />
+		<Unit filename="output/netCDF_file.hpp" />
+		<Unit filename="output/var_type_id.cpp" />
+		<Unit filename="output/var_type_id.hpp" />
+		<Extensions>
+			<envvars />
+			<code_completion />
+			<debugger />
+			<lib_finder disable_auto="1" />
+		</Extensions>
+	</Project>
+</CodeBlocks_project_file>

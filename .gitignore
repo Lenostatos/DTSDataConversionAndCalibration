@@ -1,0 +1,18 @@
+# This file lists patterns that describe files or directories which git should not track.
+# a comment - this is ignored
+# no .a files
+# *.a
+# but do track lib.a, even though you're ignoring .a files above
+# !lib.a
+# only ignore the root TODO file, not subdir/TODO
+# /TODO
+# ignore all files in the build/ directory
+# build/
+# ignore doc/notes.txt, but not doc/server/arch.txt
+# doc/*.txt
+# ignore all .txt files in the doc/ directory
+# doc/**/*.txt
+
+bin/
+obj/
+lib/boost/

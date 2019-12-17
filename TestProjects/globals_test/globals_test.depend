@@ -1,0 +1,24 @@
+# depslib dependency file v1.0
+1518343029 source:/media/HDD/Geooekologie/BA_Bachelorarbeit/Programm/DTS_DataProcessingRoutine/globals_impl.cpp
+	"globals.hpp"
+	<stdexcept>
+	<fstream>
+	<iostream>
+	"my_exceptions.hpp"
+
+1519329221 /media/HDD/Geooekologie/BA_Bachelorarbeit/Programm/DTS_DataProcessingRoutine/globals.hpp
+	<string>
+	<vector>
+	<cstring>
+
+1517935754 /media/HDD/Geooekologie/BA_Bachelorarbeit/Programm/DTS_DataProcessingRoutine/my_exceptions.hpp
+
+1516699650 source:/media/HDD/Geooekologie/BA_Bachelorarbeit/Programm/TestProjects/globals_test/main.cpp
+	"UnitTest++.h"
+
+1519329476 source:/media/HDD/Geooekologie/BA_Bachelorarbeit/Programm/TestProjects/globals_test/globals_test.cpp
+	"../../DTS_DataProcessingRoutine/globals.hpp"
+	<vector>
+	<iostream>
+	"UnitTest++.h"
+

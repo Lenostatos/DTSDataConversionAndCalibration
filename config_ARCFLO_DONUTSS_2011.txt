@@ -1,0 +1,216 @@
+###########################
+# File Directories
+###########################
+# Directory paths can be either relative or absolute.
+# Relative paths:
+# . (this is the directory that contains the program (i.e. the executable))
+# .. (this is one step above . in the filesystem hierarchy)
+# if the program is in /home/someone/apps than
+# . is /home/someone/apps
+# .. is /home/someone
+# ../.. is /home
+# Absolute paths are:
+# on UNIX (e.g. LINUX, Mac OS): paths starting with a slash
+# (e.g. /home/someone/apps)
+# on Windows: paths starting with a drive letter, a colon and a backslash
+# (e.g. C:\User) TODO: Check this for correctness.
+
+# Examples:
+# ../../measurements/rawData (relative)
+# ./measurements/rawData (relative)
+# /home/someone/measurements/rawData (absolute)
+
+# Note: The interpreter behind this should be able to understand
+# UNIX and Windows paths alike.
+
+# path to the directory from where the program shall take it's input (i.e. the xml-files)
+input_dir = /home/leon/HDDdata/Geooekologie/BA_Bachelorarbeit/Daten/XML_data/2011_Experiment/LaCie_HardDrive/archive/HHarp2011_partial/BPP11_HHarp_campaign_rev1_bNS_20110827-22_20110828-02
+
+# path to the directory where the program shall put it's output
+output_dir = ../../Daten/NetCDF_data/ARCFLO_DONUTSS_2011_processed
+
+# The name of the output file
+# (will be expanded by "_dateAndTimeOfFirstIncludedMeasurement.nc")
+output_file_name = DONUTSS_2011_val_warm_begin
+
+###########################
+# XML Paths
+###########################
+# Note: It is assumed that the user is familiar with the structure
+# of XML-Documents!
+
+# XML-paths are written as follows:
+# /nameOfRootNode/anotherNodesName/andSoOn
+
+# To find the right XML-paths please look into one of the XML-documents
+# from your measurement!
+
+# Note: If you just want the first node within another node,
+# that single node's name can be omitted. (Might increase performance!)
+# (e.g. "/root/foo/" leads to the first child node of "foo",
+# e.g. "/root//baa" leads to the first child node of root and then
+# to that node's first child with the name "baa".)
+
+# Mandatory Paths
+#################
+
+# Once this document is set up for a certain device you will
+# only have to check the first three paths when processing
+# data from different measurements!
+
+# The cold bath's temperature
+cold_bath = /wellLogs/wellLog/customData/probe2Temperature
+
+# The warm bath's temperature
+warm_bath = /wellLogs/wellLog/customData/probe1Temperature
+
+# The channel number or name
+channel = /wellLogs/wellLog/customData/forwardMeasurementChannel
+
+# The timestamp
+time = /wellLogs/wellLog/minDateTimeIndex
+
+# The first data-node
+# If there are no other nodes beside the data nodes at this path
+# you should omit the name of the data node itself to increase performance
+data = /wellLogs/wellLog/logData/
+
+# Optional Paths
+#################
+
+# Here you can freely assign XML-Paths to tags like so:
+# tags_have_to_be_whitespace_free = /some/XML/path/
+
+# Attention: Tags shall consist of arbitrary sequences of
+# alphanumeric characters, underscore '_', period '.', plus '+', hyphen '-', or at sign '@',
+# but beginning with an alphanumeric character!
+
+# CAVEAT: the tags have to be unique, i.e. differ from each other
+# and also from the tags of the mandatory paths!
+
+# Note: The tags defined here will also name the respective values in the output file.
+
+# beginning of the section where you can specify additional
+# node paths to nodes containing text:
+paths_to_text_nodes:
+
+# examples:
+# tag_foo = /path/to/a/node/containing/text
+# tag_baa = /path/to/another/node//containing/text/
+
+:paths_to_text_nodes
+ # end of the section
+
+
+# node paths to nodes containing a floating number:
+paths_to_floating_number_nodes:
+
+# example:
+# tag_whatever = /path/to/a/node/containing/a/floating/number/
+
+# The measurement duration
+duration = /wellLogs/wellLog/customData/acquisitionTime
+
+:paths_to_floating_number_nodes
+
+
+# node paths to nodes containing an integer:
+paths_to_integer_value_nodes:
+
+# example:
+# tag_idk = /path/to/a/node/containing//an/integer/value
+
+:paths_to_integer_value_nodes
+
+###########################
+# Other Options
+###########################
+# Should the output include additional temperature values
+# calibrated with the baths' temperatures? (y/n)
+do_simple_calibration = y
+do_single_ended_calibration = y
+
+# The positions of certain values within a data node
+# with the positions ordered like this:
+# LAF,ST,AST,TMP
+# (LAF = length along the fiber,
+#  ST = stokes intensity,
+#  AST = anti-stokes intensity,
+#  TMP = temperature)
+
+# If a data node looks like this:
+# <data>foo,LAF,AST,blub,TMP,fiberStatus,ST</data>
+# (with the words replaced by their corresponding numerical values)
+# the correct input is: 2,7,3,5
+# because LAF is the second value, ST the seventh, AST the third and
+# TMP the fifth.
+value_order = 1,2,3,4
+
+###########################
+# Fiber Mapping
+###########################
+
+# A mapping region on the fiber is expressed as an interval,
+# i.e.: "lower_boundary,upper_boundary"
+# where the lower boundary is included while the upper one is NOT!
+
+# Mapping value-pairs must not overlap and can contain only positive values!
+
+# Borderline case: A value-pair may have a lower boundary that is equal to
+# the upper boundary of the previous value-pair.
+# As stated above, LAF-values equal to or bigger than the lower boundary
+# and values smaller than the upper boundary are included in
+# the mapping region.
+
+# Examples:
+
+# valid_value_pair = 354.1,432.095
+# invalid_value_pair = 13.5,9       # the lower boundary has to come first
+# invalid_value_pair = -29.6,33.35  # boundaries must not be negative
+
+## These two value-pairs overlap:
+# overlapping_value_pair_1 = 5.2,6.7
+# overlapping_value_pair_2 = 6.2,6.9
+
+## These two value-pairs don't:
+# not_overlapping_value_pair_1 = 5.2,6.4
+# not_overlapping_value_pair_2 = 6.4,6.9
+
+# Mandatory Mapping tags
+########################
+
+# Note: If any of these don't exist, please specify
+# the same value for beginning and end of the respective section!
+
+warm_bath_begin = 0,0 #238,263
+
+cold_bath_begin = 274,300
+
+cold_bath_end = 1806,1829
+
+warm_bath_end = 1838,1862
+
+# Optional Mapping tags
+########################
+
+# Here multiple tags with the same name can be defined.
+
+# CAVEAT: They have to differ in their name from the mandatory mapping tags!
+
+# Attention: Tags shall consist of arbitrary sequences of
+# alphanumeric characters, underscore '_', period '.', plus '+', hyphen '-', or at sign '@',
+# but beginning with an alphanumeric character!
+
+# mapping tags and values
+mapping_tags:
+
+# examples:
+# garden = 13.5,24.3
+# living_room = 24.4,44.1
+# toilet = 44.1,46.9
+
+
+validation_bath = 238,263
+
+
+:mapping_tags

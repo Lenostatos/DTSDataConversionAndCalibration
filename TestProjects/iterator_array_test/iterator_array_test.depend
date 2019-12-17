@@ -1,0 +1,16 @@
+# depslib dependency file v1.0
+1519321540 source:/media/HDD/Geooekologie/BA_Bachelorarbeit/Programm/DTS_DataProcessingRoutine/iterator_array.cpp
+	"iterator_array.hpp"
+
+1519323379 /media/HDD/Geooekologie/BA_Bachelorarbeit/Programm/DTS_DataProcessingRoutine/iterator_array.hpp
+	<vector>
+	<cassert>
+
+1517070876 source:/media/HDD/Geooekologie/BA_Bachelorarbeit/Programm/TestProjects/iterator_array_test/main.cpp
+	"UnitTest++.h"
+
+1519323336 source:/media/HDD/Geooekologie/BA_Bachelorarbeit/Programm/TestProjects/iterator_array_test/iterator_array_test.cpp
+	"../../DTS_DataProcessingRoutine/iterator_array.hpp"
+	<vector>
+	"UnitTest++.h"
+

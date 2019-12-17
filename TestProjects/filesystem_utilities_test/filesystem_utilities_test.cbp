@@ -1,0 +1,61 @@
+<?xml version="1.0" encoding="UTF-8" standalone="yes" ?>
+<CodeBlocks_project_file>
+	<FileVersion major="1" minor="6" />
+	<Project>
+		<Option title="filesystem_utilities_test" />
+		<Option pch_mode="2" />
+		<Option compiler="gcc" />
+		<Build>
+			<Target title="Debug">
+				<Option output="bin/Debug/filesystem_utilities_test" prefix_auto="1" extension_auto="1" />
+				<Option object_output="obj/Debug/" />
+				<Option type="1" />
+				<Option compiler="gcc" />
+				<Compiler>
+					<Add option="-g" />
+				</Compiler>
+				<Linker>
+					<Add library="/media/HDD/MyLibs/Cpp/boost/lib/libboost_filesystem-gcc-mt-d-1_65_1.so" />
+					<Add library="/media/HDD/MyLibs/Cpp/boost/lib/libboost_system-gcc-mt-d-1_65_1.so" />
+				</Linker>
+			</Target>
+			<Target title="Release">
+				<Option output="bin/Release/filesystem_utilities_test" prefix_auto="1" extension_auto="1" />
+				<Option object_output="obj/Release/" />
+				<Option type="1" />
+				<Option compiler="gcc" />
+				<Compiler>
+					<Add option="-O2" />
+				</Compiler>
+				<Linker>
+					<Add option="-s" />
+				</Linker>
+				<ExtraCommands>
+					<Add after="$exe_output" />
+				</ExtraCommands>
+			</Target>
+		</Build>
+		<Compiler>
+			<Add option="-Wall" />
+			<Add option="-fexceptions" />
+			<Add directory="/media/HDD/MyLibs/Cpp/boost/include" />
+		</Compiler>
+		<Linker>
+			<Add library="/media/HDD/MyLibs/Cpp/boost/lib/libboost_filesystem-gcc-mt-1_65_1.so" />
+			<Add library="/media/HDD/MyLibs/Cpp/boost/lib/libboost_filesystem-gcc-mt-d-1_65_1.so" />
+			<Add library="/media/HDD/MyLibs/Cpp/boost/lib/libboost_system-gcc-mt-1_65_1.so" />
+			<Add library="/media/HDD/MyLibs/Cpp/boost/lib/libboost_system-gcc-mt-d-1_65_1.so" />
+			<Add directory="/media/HDD/MyLibs/Cpp/boost/lib" />
+		</Linker>
+		<Unit filename="../../DTS_DataProcessingRoutine/filesystem_utilities.hpp" />
+		<Unit filename="../../DTS_DataProcessingRoutine/filesystem_utilities_impl.cpp" />
+		<Unit filename="filesystem_utilities_test.cpp" />
+		<Unit filename="main.cpp" />
+		<Extensions>
+			<envvars />
+			<code_completion />
+			<debugger />
+			<lib_finder disable_auto="1" />
+		</Extensions>
+	</Project>
+</CodeBlocks_project_file>

@@ -1,0 +1,10 @@
+# depslib dependency file v1.0
+1514039237 source:/media/HDD/Geooekologie/BA_Bachelorarbeit/Programm/TestProjects/valarray_test/valarray_test/main.cpp
+	<iostream>
+	<valarray>
+	<vector>
+	"main.hpp"
+
+1513944335 /media/HDD/Geooekologie/BA_Bachelorarbeit/Programm/TestProjects/valarray_test/valarray_test/main.hpp
+	<iostream>
+

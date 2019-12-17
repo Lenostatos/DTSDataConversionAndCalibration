@@ -1,0 +1,109 @@
+<?xml version="1.0" encoding="UTF-8" standalone="yes" ?>
+<CodeBlocks_project_file>
+	<FileVersion major="1" minor="6" />
+	<Project>
+		<Option title="node_path_test" />
+		<Option pch_mode="2" />
+		<Option compiler="gcc" />
+		<Build>
+			<Target title="Debug">
+				<Option output="bin/Debug/node_path_test" prefix_auto="1" extension_auto="1" />
+				<Option object_output="obj/Debug/" />
+				<Option type="1" />
+				<Option compiler="gcc" />
+				<Compiler>
+					<Add option="-g" />
+					<Add directory="/media/HDD/MyLibs/Cpp/rapidxml-1.13" />
+					<Add directory="/media/HDD/MyLibs/Cpp/boost/include" />
+				</Compiler>
+				<Linker>
+					<Add library="/media/HDD/MyLibs/Cpp/boost/lib/libboost_filesystem-gcc-mt-1_65_1.so" />
+					<Add library="/media/HDD/MyLibs/Cpp/boost/lib/libboost_filesystem-gcc-mt-d-1_65_1.so" />
+					<Add library="/media/HDD/MyLibs/Cpp/boost/lib/libboost_iostreams-gcc-mt-1_65_1.so" />
+					<Add library="/media/HDD/MyLibs/Cpp/boost/lib/libboost_iostreams-gcc-mt-d-1_65_1.so" />
+					<Add library="/media/HDD/MyLibs/Cpp/boost/lib/libboost_system-gcc-mt-1_65_1.so" />
+					<Add library="/media/HDD/MyLibs/Cpp/boost/lib/libboost_system-gcc-mt-d-1_65_1.so" />
+					<Add directory="/media/HDD/MyLibs/Cpp/boost/lib" />
+				</Linker>
+			</Target>
+			<Target title="Release">
+				<Option output="bin/Release/node_path_test" prefix_auto="1" extension_auto="1" />
+				<Option object_output="obj/Release/" />
+				<Option type="1" />
+				<Option compiler="gcc" />
+				<Compiler>
+					<Add option="-O2" />
+					<Add directory="/media/HDD/MyLibs/Cpp/boost/include" />
+					<Add directory="/media/HDD/MyLibs/Cpp/rapidxml-1.13" />
+				</Compiler>
+				<Linker>
+					<Add option="-s" />
+					<Add library="/media/HDD/MyLibs/Cpp/boost/lib/libboost_filesystem.a" />
+					<Add library="/media/HDD/MyLibs/Cpp/boost/lib/libboost_filesystem.so" />
+					<Add library="/media/HDD/MyLibs/Cpp/boost/lib/libboost_filesystem-gcc-1_65_1.a" />
+					<Add library="/media/HDD/MyLibs/Cpp/boost/lib/libboost_filesystem-gcc-1_65_1.so" />
+					<Add library="/media/HDD/MyLibs/Cpp/boost/lib/libboost_filesystem-gcc-d-1_65_1.a" />
+					<Add library="/media/HDD/MyLibs/Cpp/boost/lib/libboost_filesystem-gcc-d-1_65_1.so" />
+					<Add library="/media/HDD/MyLibs/Cpp/boost/lib/libboost_filesystem-gcc-mt-1_65_1.a" />
+					<Add library="/media/HDD/MyLibs/Cpp/boost/lib/libboost_filesystem-gcc-mt-1_65_1.so" />
+					<Add library="/media/HDD/MyLibs/Cpp/boost/lib/libboost_filesystem-gcc-mt-d-1_65_1.a" />
+					<Add library="/media/HDD/MyLibs/Cpp/boost/lib/libboost_filesystem-gcc-mt-d-1_65_1.so" />
+					<Add library="/media/HDD/MyLibs/Cpp/boost/lib/libboost_filesystem-gcc-mt-s-1_65_1.a" />
+					<Add library="/media/HDD/MyLibs/Cpp/boost/lib/libboost_filesystem-gcc-mt-sd-1_65_1.a" />
+					<Add library="/media/HDD/MyLibs/Cpp/boost/lib/libboost_filesystem-gcc-s-1_65_1.a" />
+					<Add library="/media/HDD/MyLibs/Cpp/boost/lib/libboost_filesystem-gcc-sd-1_65_1.a" />
+					<Add library="/media/HDD/MyLibs/Cpp/boost/lib/libboost_iostreams.a" />
+					<Add library="/media/HDD/MyLibs/Cpp/boost/lib/libboost_iostreams.so" />
+					<Add library="/media/HDD/MyLibs/Cpp/boost/lib/libboost_iostreams-gcc-1_65_1.a" />
+					<Add library="/media/HDD/MyLibs/Cpp/boost/lib/libboost_iostreams-gcc-1_65_1.so" />
+					<Add library="/media/HDD/MyLibs/Cpp/boost/lib/libboost_iostreams-gcc-d-1_65_1.a" />
+					<Add library="/media/HDD/MyLibs/Cpp/boost/lib/libboost_iostreams-gcc-d-1_65_1.so" />
+					<Add library="/media/HDD/MyLibs/Cpp/boost/lib/libboost_iostreams-gcc-mt-1_65_1.a" />
+					<Add library="/media/HDD/MyLibs/Cpp/boost/lib/libboost_iostreams-gcc-mt-1_65_1.so" />
+					<Add library="/media/HDD/MyLibs/Cpp/boost/lib/libboost_iostreams-gcc-mt-d-1_65_1.a" />
+					<Add library="/media/HDD/MyLibs/Cpp/boost/lib/libboost_iostreams-gcc-mt-d-1_65_1.so" />
+					<Add library="/media/HDD/MyLibs/Cpp/boost/lib/libboost_iostreams-gcc-mt-s-1_65_1.a" />
+					<Add library="/media/HDD/MyLibs/Cpp/boost/lib/libboost_iostreams-gcc-mt-sd-1_65_1.a" />
+					<Add library="/media/HDD/MyLibs/Cpp/boost/lib/libboost_iostreams-gcc-s-1_65_1.a" />
+					<Add library="/media/HDD/MyLibs/Cpp/boost/lib/libboost_iostreams-gcc-sd-1_65_1.a" />
+					<Add library="/media/HDD/MyLibs/Cpp/boost/lib/libboost_system.a" />
+					<Add library="/media/HDD/MyLibs/Cpp/boost/lib/libboost_system.so" />
+					<Add library="/media/HDD/MyLibs/Cpp/boost/lib/libboost_system-gcc-1_65_1.a" />
+					<Add library="/media/HDD/MyLibs/Cpp/boost/lib/libboost_system-gcc-1_65_1.so" />
+					<Add library="/media/HDD/MyLibs/Cpp/boost/lib/libboost_system-gcc-d-1_65_1.a" />
+					<Add library="/media/HDD/MyLibs/Cpp/boost/lib/libboost_system-gcc-d-1_65_1.so" />
+					<Add library="/media/HDD/MyLibs/Cpp/boost/lib/libboost_system-gcc-mt-1_65_1.a" />
+					<Add library="/media/HDD/MyLibs/Cpp/boost/lib/libboost_system-gcc-mt-1_65_1.so" />
+					<Add library="/media/HDD/MyLibs/Cpp/boost/lib/libboost_system-gcc-mt-d-1_65_1.a" />
+					<Add library="/media/HDD/MyLibs/Cpp/boost/lib/libboost_system-gcc-mt-d-1_65_1.so" />
+					<Add library="/media/HDD/MyLibs/Cpp/boost/lib/libboost_system-gcc-mt-s-1_65_1.a" />
+					<Add library="/media/HDD/MyLibs/Cpp/boost/lib/libboost_system-gcc-mt-sd-1_65_1.a" />
+					<Add library="/media/HDD/MyLibs/Cpp/boost/lib/libboost_system-gcc-s-1_65_1.a" />
+					<Add library="/media/HDD/MyLibs/Cpp/boost/lib/libboost_system-gcc-sd-1_65_1.a" />
+					<Add directory="/media/HDD/MyLibs/Cpp/boost/lib" />
+				</Linker>
+				<ExtraCommands>
+					<Add after="$exe_output" />
+					<Mode after="always" />
+				</ExtraCommands>
+			</Target>
+		</Build>
+		<Compiler>
+			<Add option="-Wall" />
+			<Add option="-fexceptions" />
+			<Add directory="/media/HDD/MyLibs/Cpp/rapidxml-1.13" />
+		</Compiler>
+		<Unit filename="../../DTS_DataProcessingRoutine/globals.hpp" />
+		<Unit filename="../../DTS_DataProcessingRoutine/globals_impl.cpp" />
+		<Unit filename="../../DTS_DataProcessingRoutine/node_path.hpp" />
+		<Unit filename="../../DTS_DataProcessingRoutine/node_path_impl.cpp" />
+		<Unit filename="main.cpp" />
+		<Unit filename="node_path_test.cpp" />
+		<Extensions>
+			<envvars />
+			<code_completion />
+			<debugger />
+			<lib_finder disable_auto="1" />
+		</Extensions>
+	</Project>
+</CodeBlocks_project_file>

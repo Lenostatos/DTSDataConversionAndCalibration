@@ -1,0 +1,73 @@
+<?xml version="1.0" encoding="UTF-8" standalone="yes" ?>
+<CodeBlocks_project_file>
+	<FileVersion major="1" minor="6" />
+	<Project>
+		<Option title="user_configuration_test" />
+		<Option pch_mode="2" />
+		<Option compiler="gcc" />
+		<Build>
+			<Target title="Debug">
+				<Option output="bin/Debug/user_configuration_test" prefix_auto="1" extension_auto="1" />
+				<Option object_output="obj/Debug/" />
+				<Option type="1" />
+				<Option compiler="gcc" />
+				<Compiler>
+					<Add option="-g" />
+				</Compiler>
+			</Target>
+			<Target title="Release">
+				<Option output="bin/Release/user_configuration_test" prefix_auto="1" extension_auto="1" />
+				<Option object_output="obj/Release/" />
+				<Option type="1" />
+				<Option compiler="gcc" />
+				<Compiler>
+					<Add option="-O2" />
+				</Compiler>
+				<Linker>
+					<Add option="-s" />
+				</Linker>
+				<ExtraCommands>
+					<Add after="$exe_output" />
+				</ExtraCommands>
+			</Target>
+		</Build>
+		<Compiler>
+			<Add option="-Wall" />
+			<Add option="-fexceptions" />
+			<Add directory="/media/HDD/MyLibs/Cpp/rapidxml-1.13" />
+			<Add directory="/media/HDD/MyLibs/Cpp/boost/include" />
+		</Compiler>
+		<Linker>
+			<Add library="/media/HDD/MyLibs/Cpp/boost/lib/libboost_filesystem-mt.a" />
+			<Add library="/media/HDD/MyLibs/Cpp/boost/lib/libboost_filesystem-mt.so" />
+			<Add library="/media/HDD/MyLibs/Cpp/boost/lib/libboost_filesystem-mt-d.a" />
+			<Add library="/media/HDD/MyLibs/Cpp/boost/lib/libboost_filesystem-mt-d.so" />
+			<Add library="/media/HDD/MyLibs/Cpp/boost/lib/libboost_filesystem-mt-s.a" />
+			<Add library="/media/HDD/MyLibs/Cpp/boost/lib/libboost_filesystem-mt-sd.a" />
+			<Add library="/media/HDD/MyLibs/Cpp/boost/lib/libboost_system-mt.a" />
+			<Add library="/media/HDD/MyLibs/Cpp/boost/lib/libboost_system-mt.so" />
+			<Add library="/media/HDD/MyLibs/Cpp/boost/lib/libboost_system-mt-d.a" />
+			<Add library="/media/HDD/MyLibs/Cpp/boost/lib/libboost_system-mt-d.so" />
+			<Add library="/media/HDD/MyLibs/Cpp/boost/lib/libboost_system-mt-s.a" />
+			<Add library="/media/HDD/MyLibs/Cpp/boost/lib/libboost_system-mt-sd.a" />
+			<Add directory="/media/HDD/MyLibs/Cpp/boost/lib" />
+		</Linker>
+		<Unit filename="../../DTS_DataProcessingRoutine/filesystem_utilities.hpp" />
+		<Unit filename="../../DTS_DataProcessingRoutine/filesystem_utilities_impl.cpp" />
+		<Unit filename="../../DTS_DataProcessingRoutine/my_exceptions.hpp" />
+		<Unit filename="../../DTS_DataProcessingRoutine/node_path.hpp" />
+		<Unit filename="../../DTS_DataProcessingRoutine/node_path_impl.cpp" />
+		<Unit filename="../../DTS_DataProcessingRoutine/user_configuration.hpp" />
+		<Unit filename="../../DTS_DataProcessingRoutine/user_configuration_impl.cpp" />
+		<Unit filename="../../DTS_DataProcessingRoutine/xml_file.hpp" />
+		<Unit filename="main.cpp" />
+		<Unit filename="test_config.txt" />
+		<Unit filename="user_configuration_test.cpp" />
+		<Extensions>
+			<envvars />
+			<code_completion />
+			<debugger />
+			<lib_finder disable_auto="1" />
+		</Extensions>
+	</Project>
+</CodeBlocks_project_file>

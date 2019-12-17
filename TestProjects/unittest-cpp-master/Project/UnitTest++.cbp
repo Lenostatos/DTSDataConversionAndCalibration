@@ -1,0 +1,190 @@
+<?xml version="1.0" encoding="UTF-8" standalone="yes" ?>
+<CodeBlocks_project_file>
+	<FileVersion major="1" minor="6" />
+	<Project>
+		<Option title="UnitTest++" />
+		<Option pch_mode="2" />
+		<Option compiler="gcc" />
+		<Build>
+			<Target title="Debug">
+				<Option platforms="Windows;" />
+				<Option output="../Deliv/Debug/libUnitTest++.a" prefix_auto="0" extension_auto="0" />
+				<Option working_dir="" />
+				<Option object_output="../Deliv/Debug/" />
+				<Option type="2" />
+				<Option compiler="gcc" />
+				<Option createDefFile="1" />
+				<Compiler>
+					<Add option="-Winit-self" />
+					<Add option="-Wredundant-decls" />
+					<Add option="-Wcast-align" />
+					<Add option="-Wundef" />
+					<Add option="-Wfloat-equal" />
+					<Add option="-Wmissing-declarations" />
+					<Add option="-Wmissing-include-dirs" />
+					<Add option="-Wswitch-enum" />
+					<Add option="-Wswitch-default" />
+					<Add option="-Wmain" />
+					<Add option="-pedantic" />
+					<Add option="-std=c++98" />
+					<Add option="-Wextra" />
+					<Add option="-Wall" />
+					<Add option="-ansi" />
+					<Add option="-g" />
+				</Compiler>
+			</Target>
+			<Target title="Release">
+				<Option platforms="Windows;" />
+				<Option output="../Deliv/Release/libUnitTest++.a" prefix_auto="0" extension_auto="0" />
+				<Option working_dir="" />
+				<Option object_output="../Deliv/Release/" />
+				<Option type="2" />
+				<Option compiler="gcc" />
+				<Option createDefFile="1" />
+				<Compiler>
+					<Add option="-O3" />
+					<Add option="-Winit-self" />
+					<Add option="-Wredundant-decls" />
+					<Add option="-Wcast-align" />
+					<Add option="-Wundef" />
+					<Add option="-Wfloat-equal" />
+					<Add option="-Wmissing-declarations" />
+					<Add option="-Wmissing-include-dirs" />
+					<Add option="-Wswitch-enum" />
+					<Add option="-Wswitch-default" />
+					<Add option="-Wmain" />
+					<Add option="-pedantic" />
+					<Add option="-std=c++98" />
+					<Add option="-Wextra" />
+					<Add option="-Wall" />
+					<Add option="-ansi" />
+				</Compiler>
+				<Linker>
+					<Add option="-s" />
+				</Linker>
+			</Target>
+			<Target title="Debug(linux)">
+				<Option platforms="Unix;Mac;" />
+				<Option output="../Deliv/Debug/libUnitTest++.a" prefix_auto="0" extension_auto="0" />
+				<Option working_dir="" />
+				<Option object_output="../Deliv/Debug/" />
+				<Option type="2" />
+				<Option compiler="gcc" />
+				<Option createDefFile="1" />
+				<Compiler>
+					<Add option="-Winit-self" />
+					<Add option="-Wredundant-decls" />
+					<Add option="-Wcast-align" />
+					<Add option="-Wundef" />
+					<Add option="-Wfloat-equal" />
+					<Add option="-Wmissing-declarations" />
+					<Add option="-Wmissing-include-dirs" />
+					<Add option="-Wswitch-enum" />
+					<Add option="-Wswitch-default" />
+					<Add option="-Wmain" />
+					<Add option="-pedantic" />
+					<Add option="-std=c++98" />
+					<Add option="-Wextra" />
+					<Add option="-Wall" />
+					<Add option="-ansi" />
+					<Add option="-g" />
+				</Compiler>
+			</Target>
+			<Target title="Release(linux)">
+				<Option platforms="Unix;Mac;" />
+				<Option output="../Deliv/Release/libUnitTest++.a" prefix_auto="0" extension_auto="0" />
+				<Option working_dir="" />
+				<Option object_output="../Deliv/Release/" />
+				<Option type="2" />
+				<Option compiler="gcc" />
+				<Option createDefFile="1" />
+				<Compiler>
+					<Add option="-O3" />
+					<Add option="-Winit-self" />
+					<Add option="-Wredundant-decls" />
+					<Add option="-Wcast-align" />
+					<Add option="-Wundef" />
+					<Add option="-Wfloat-equal" />
+					<Add option="-Wmissing-declarations" />
+					<Add option="-Wmissing-include-dirs" />
+					<Add option="-Wswitch-enum" />
+					<Add option="-Wswitch-default" />
+					<Add option="-Wmain" />
+					<Add option="-pedantic" />
+					<Add option="-std=c++98" />
+					<Add option="-Wextra" />
+					<Add option="-Wall" />
+					<Add option="-ansi" />
+				</Compiler>
+				<Linker>
+					<Add option="-s" />
+				</Linker>
+			</Target>
+		</Build>
+		<VirtualTargets>
+			<Add alias="All" targets="Debug;Release;Debug(linux);Release(linux);" />
+		</VirtualTargets>
+		<Unit filename="../UnitTest++/AssertException.cpp" />
+		<Unit filename="../UnitTest++/AssertException.h" />
+		<Unit filename="../UnitTest++/CheckMacros.h" />
+		<Unit filename="../UnitTest++/Checks.cpp" />
+		<Unit filename="../UnitTest++/Checks.h" />
+		<Unit filename="../UnitTest++/CompositeTestReporter.cpp" />
+		<Unit filename="../UnitTest++/CompositeTestReporter.h" />
+		<Unit filename="../UnitTest++/Config.h" />
+		<Unit filename="../UnitTest++/CurrentTest.cpp" />
+		<Unit filename="../UnitTest++/CurrentTest.h" />
+		<Unit filename="../UnitTest++/DeferredTestReporter.cpp" />
+		<Unit filename="../UnitTest++/DeferredTestReporter.h" />
+		<Unit filename="../UnitTest++/DeferredTestResult.cpp" />
+		<Unit filename="../UnitTest++/DeferredTestResult.h" />
+		<Unit filename="../UnitTest++/ExceptionMacros.h" />
+		<Unit filename="../UnitTest++/ExecuteTest.h" />
+		<Unit filename="../UnitTest++/HelperMacros.h" />
+		<Unit filename="../UnitTest++/Makefile.am" />
+		<Unit filename="../UnitTest++/MemoryOutStream.cpp" />
+		<Unit filename="../UnitTest++/MemoryOutStream.h" />
+		<Unit filename="../UnitTest++/Posix/SignalTranslator.cpp" />
+		<Unit filename="../UnitTest++/Posix/SignalTranslator.h" />
+		<Unit filename="../UnitTest++/Posix/TimeHelpers.cpp" />
+		<Unit filename="../UnitTest++/Posix/TimeHelpers.h" />
+		<Unit filename="../UnitTest++/ReportAssert.cpp" />
+		<Unit filename="../UnitTest++/ReportAssert.h" />
+		<Unit filename="../UnitTest++/ReportAssertImpl.h" />
+		<Unit filename="../UnitTest++/RequireMacros.h" />
+		<Unit filename="../UnitTest++/RequiredCheckException.cpp" />
+		<Unit filename="../UnitTest++/RequiredCheckException.h" />
+		<Unit filename="../UnitTest++/RequiredCheckTestReporter.cpp" />
+		<Unit filename="../UnitTest++/RequiredCheckTestReporter.h" />
+		<Unit filename="../UnitTest++/Test.cpp" />
+		<Unit filename="../UnitTest++/Test.h" />
+		<Unit filename="../UnitTest++/TestDetails.cpp" />
+		<Unit filename="../UnitTest++/TestDetails.h" />
+		<Unit filename="../UnitTest++/TestList.cpp" />
+		<Unit filename="../UnitTest++/TestList.h" />
+		<Unit filename="../UnitTest++/TestMacros.h" />
+		<Unit filename="../UnitTest++/TestReporter.cpp" />
+		<Unit filename="../UnitTest++/TestReporter.h" />
+		<Unit filename="../UnitTest++/TestReporterStdout.cpp" />
+		<Unit filename="../UnitTest++/TestReporterStdout.h" />
+		<Unit filename="../UnitTest++/TestResults.cpp" />
+		<Unit filename="../UnitTest++/TestResults.h" />
+		<Unit filename="../UnitTest++/TestRunner.cpp" />
+		<Unit filename="../UnitTest++/TestRunner.h" />
+		<Unit filename="../UnitTest++/TestSuite.h" />
+		<Unit filename="../UnitTest++/ThrowingTestReporter.cpp" />
+		<Unit filename="../UnitTest++/ThrowingTestReporter.h" />
+		<Unit filename="../UnitTest++/TimeConstraint.cpp" />
+		<Unit filename="../UnitTest++/TimeConstraint.h" />
+		<Unit filename="../UnitTest++/TimeHelpers.h" />
+		<Unit filename="../UnitTest++/UnitTest++.h" />
+		<Unit filename="../UnitTest++/UnitTestPP.h" />
+		<Unit filename="../UnitTest++/XmlTestReporter.cpp" />
+		<Unit filename="../UnitTest++/XmlTestReporter.h" />
+		<Extensions>
+			<envvars />
+			<code_completion />
+			<debugger />
+		</Extensions>
+	</Project>
+</CodeBlocks_project_file>

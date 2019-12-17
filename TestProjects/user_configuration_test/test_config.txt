@@ -1,0 +1,214 @@
+#[InputFileDir] ../BspXMLFiles/VertHarpExp2017Kloendeel/UltimaVHSRE/channel 1 # path to the directory with the xml-files
+# TODO: [undefined] file naming conventions apply # note: as of now wildcards are not supported!
+# can be either relative to location of executable or an absolute path
+# Node paths: if there is only one node within another node, this single node's name can be omitted (e.g. "/root//node") TODO: test whether this is true
+#[TimePath] /logs/log/startDateTimeIndex # Path to the node containing the file's timestamp
+#[ColdBathPath] /logs/log/customData/probe2Temperature
+#[WarmBathPath] /logs/log/customData/probe1Temperature
+#[DataPath] /logs/log/logData/data # Path to the first data-node
+#[DataColumnsOrder] 1234 # The order of the values in the data nodes with 1=laf, 2=st, 3=ast, 4=tmp
+[OutputFileSize] = all # Number of input files to be aggregated into one output file or the word 'all' (without the quotes) to get all the files in the folder
+
+###########################
+# File Directories
+###########################
+# Directory paths can be either relative or absolute.
+# Relative paths:
+# . (this is the directory that contains the program (i.e. the executable))
+# .. (this is one step above . in the filesystem hierarchy)
+# if the program is in /home/someone/apps than
+# . is /home/someone/apps
+# .. is /home/someone
+# ../.. is /home
+# Absolute paths are:
+# on UNIX (e.g. LINUX, Mac OS): paths starting with a slash
+# (e.g. /home/someone/apps)
+# on Windows: paths starting with a drive letter, a colon and a backslash
+# (e.g. C:\User) TODO: Check this for correctness.
+
+# Examples:
+# ../../measurements/rawData (relative)
+# ./measurements/rawData (relative)
+# /home/someone/measurements/rawData (absolute)
+
+# Note: The interpreter behind this should be able to understand
+# UNIX and Windows paths alike.
+
+# path to the directory from where the program shall take it's input (i.e. the xml-files)
+input_dir = test_input_dir
+
+# path to the directory where the program shall put it's output
+output_dir = test_output_dir
+
+# The name of the output file
+# (will be expanded by "_dateAndTimeOfFirstIncludedMeasurement")
+# Mustn't contain whitespace characters!
+output_file_name = test_output_file_name
+
+###########################
+# XML Paths
+###########################
+# Note: It is assumed that the user is familiar with the structure
+# of XML-Documents!
+
+# XML-paths are written as follows:
+# /nameOfRootNode/anotherNodesName/andSoOn
+
+# To find the right XML-paths please look into one of the XML-documents
+# from your measurement!
+
+# Note: If you just want the first node within another node,
+# that single node's name can be omitted. (Might increase performance!)
+# (e.g. "/root/foo/" leads to the first child node of "foo",
+# e.g. "/root//baa" leads to the first child node of root and then
+# to that node's first child with the name "baa".)
+
+# Mandatory Paths
+#################
+
+# Once this document is set up for a certain device you will
+# only have to check the first three paths when processing
+# data from different measurements!
+
+# The cold bath's temperature
+cold_bath = /logs/log/customData/probe2Temperature
+
+# The warm bath's temperature
+warm_bath = /logs/log/customData/probe1Temperature
+
+# The channel number or name
+channel = /logs/log/customData/forwardMeasurementChannel
+
+# The timestamp
+time = /logs/log/startDateTimeIndex
+
+# The first data-node
+data = /logs/log/logData/
+
+# Optional Paths
+#################
+
+# Here you can freely assign XML-Paths to tags like so:
+# tag_without_whitespace = /some/XML/path/
+
+# Attention: Tags shall only consist of arbitrary sequences of
+# alphanumeric characters, underscore '_', period '.', plus '+', hyphen '-', or at sign '@',
+# but beginning with an alphanumeric character!
+
+# CAVEAT: the tags have to be unique, i.e. differ from each other
+# and also from the tags of the mandatory paths!
+
+# Note: The tags defined here will also name the respective values in the output file.
+
+
+paths_to_text_nodes:
+####################
+# beginning of the section where you can specify additional
+# node paths to nodes containing text
+
+# examples:
+# tag_foo = /path/to/a/node/containing/text
+# tag_baa = /path/to/another/node//containing/text/
+
+:paths_to_text_nodes
+ # end of the section
+
+
+paths_to_floating_number_nodes:
+###############################
+# node paths to nodes containing a floating number
+
+# example:
+# tag_whatever = /path/to/a/node/containing/a/floating/number/
+
+# The measurement duration
+duration = /logs/log/customData/acquisitionTime
+
+:paths_to_floating_number_nodes
+
+
+paths_to_integer_value_nodes:
+#############################
+# node paths to nodes containing an integer
+
+# example:
+# tag_idk = /path/to/a/node/containing//an/integer/value
+
+# The fiber status
+fiber_status = /logs/log/customData/fibreStatusOk
+
+:paths_to_integer_value_nodes
+
+
+###########################
+# Other Options
+###########################
+# Should the output include additional temperature values calculated
+# with the baths' temperatures? (y/n)
+calculate_calibrated_temperatures = y
+
+# The number of values in a single data node.
+# (Has to be at least 4!)
+#num_values_per_node = 4
+
+# The positions of certain values within a data node
+# with the positions ordered like this:
+# laf,st,ast,tmp
+# (laf = length along the fiber,
+#  st = stokes intensity,
+#  ast = anti-stokes intensity,
+#  tmp = temperature)
+
+# If a data node looks like this:
+# <data>foo,laf,ast,blub,tmp,fiberStatus,st</data>
+# (with the words replaced by their corresponding numerical values)
+# the correct input is: 2,7,3,5
+# because laf is the second value, st the seventh, ast the third and
+# tmp the fifth.
+value_order = 1,2,3,4
+
+###########################
+# Fiber Mapping
+###########################
+
+# Mandatory Mapping tags
+########################
+
+# Note: If any of these don't exist, please specify
+# the same value for beginning and end of the respective section!
+
+cold_bath_begin = 0,0
+
+warm_bath_begin = 2.3,2.3
+
+cold_bath_end = 231.0,231.0
+
+warm_bath_end = 777,777
+
+# Optional Mapping tags
+########################
+
+# Here multiple tags with the same name can be defined.
+
+# Attention: Tags shall only consist of arbitrary sequences of
+# alphanumeric characters, underscore '_', period '.', plus '+', hyphen '-', or at sign '@',
+# but beginning with an alphanumeric character!
+
+# CAVEAT: They have to differ in their name from the mandatory mapping tags!
+
+mapping_tags:
+#############
+# mapping tags and values
+
+#examples:
+# garden = 13.5,24.3
+ # living_room = 24.4,44.1 # indenting for testing purposes
+    # toilet = 44.1,46.9
+
+test_mapping = 3,6
+
+
+test_mapping_2 = 1234.567,1234.891 # test comment after tag value
+test_mapping_3 = 0.000,0.0001
+
+:mapping_tags
